@@ -1,0 +1,332 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:root {
+    --Soft-red: hsl(7, 99%, 70%);
+    --Yellow: hsl(51, 100%, 49%);
+    --Dark-desaturated-cyan: hsl(167, 40%, 24%); /* (graphic design text) */
+    --Dark-blue: hsl(198, 62%, 26%); /* (photography text) */
+    --Dark-moderate-cyan : hsl(168, 34%, 41%); /* (footer) */
+    --Very-dark-desaturated-blue: hsl(212, 27%, 19%);
+    --Very-dark-grayish-blue: hsl(213, 9%, 39%);
+    --Dark-grayish-blue: hsl(232, 10%, 55%);
+    --Grayish-blue: hsl(210, 4%, 67%);
+    --White: hsl(0, 0%, 100%);
+    --paragraph-font: 18px;
+}
+
+body {
+    font-family: 'Barlow', sans-serif;
+    font-family: 'Fraunces', serif;
+}
+
+/* Start Header */
+
+p {
+    font-family: 'Barlow', sans-serif;
+}
+
+header {
+    background-image: url(/images/desktop/image-header.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Barlow', sans-serif;
+}
+
+@media (max-width:768px) {
+    header {
+        background-image: url(/images/mobile/image-header.jpg);
+    }
+    header .text h1 {
+        font-size: 30px !important;
+    }
+}
+
+nav {
+    position: relative;
+    overflow: hidden;
+}
+
+.list-holder ul {
+    margin-right: 0 !important;
+    gap: 20px;
+}
+
+.list-holder ul li a {
+    color: var(--White);
+}
+
+.list-holder ul li a:hover {
+    color: var(--White);
+}
+
+.contact {
+    background-color: var(--White);
+    padding: 10px 30px !important;
+    color: black !important;
+    transition: .3s;
+    font-family: 'Fraunces', serif;
+}
+
+.contact:hover {
+    background-color: rgba(255 , 255 , 255 , 50%);
+    color: var(--White) !important;
+}
+
+button {
+    border: none !important;
+}
+
+button:focus {
+    box-shadow: none !important;
+}
+
+header .text h1 {
+    color: var(--White);
+    letter-spacing: 4px;
+    font-family: 'Fraunces', serif;
+    font-size: 50px;
+}
+
+@media (min-width:992px) {
+    .list-holder {
+        display: block !important;
+    }
+}
+
+@media (max-width:991px) {
+    .list-holder ul {
+        text-align: center;
+        background-color: var(--White) ;
+        padding: 20px;
+        margin-top: 50px;
+        position: relative;
+    }
+    .list-holder ul::after {
+        content: '';
+        border: 30px solid;
+        border-color: transparent white transparent transparent;
+        position: absolute;
+        top: -30px;
+        right: 0;
+    }
+    .list-holder ul li a {
+        color: var(--Dark-grayish-blue);
+    }
+    .contact {
+        width: fit-content;
+        margin: 0 auto;
+        background-color: var(--Yellow);
+    }
+}
+
+/* End Header */
+/* Start section */
+
+/* box 1 */
+.box-one .info ,
+.box-two .info {
+    flex-basis: 50%;
+}
+
+.box-one img ,
+.box-two img {
+    flex-basis: 50%;
+}
+
+.box-one .info p ,
+.box-two .info p {
+    color: var(--Dark-grayish-blue);
+    max-width: 400px;
+}
+
+.box-one h1 ,
+.box-two h1 {
+    color: var(--Very-dark-desaturated-blue);
+    font-weight: 900;
+}
+
+.box-one .info .learn-more ,
+.box-two .info .learn-more {
+    position: relative;
+    text-transform: uppercase;
+    width: fit-content;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.box-one .info .learn-more::after ,
+.box-two .info .learn-more::after {
+    content: '';
+    width: calc(100% + 10px);
+    height: 10px;
+    position: absolute;
+    left: -5px;
+    bottom: 0;
+    background-color: var(--Yellow);
+    z-index: -1;
+    opacity: .3;
+    border-radius: 5px;
+    transition: .3s;
+}
+
+.box-one .info .learn-more:hover::after ,
+.box-two .info .learn-more:hover::after {
+    opacity: 1;
+}
+
+.box-two .info .learn-more::after {
+    background-color: var(--Soft-red);
+}
+
+.box-two {
+    flex-direction: row-reverse;
+}
+
+.two-boxes {
+    overflow: hidden;
+}
+
+.two-boxes .box-three {
+    background-image: url(/images/desktop/image-graphic-design.jpg);
+}
+
+.two-boxes .box-four {
+    background-image: url(/images/desktop/image-photography.jpg);
+}
+
+.two-boxes .box-three ,
+.two-boxes .box-four {
+    flex-basis: 50%;
+    background-repeat: no-repeat;
+    height: 600px;
+    background-position: top;
+    background-size: cover;
+}
+
+
+.two-boxes .box-three p {
+    color: var(--Dark-desaturated-cyan);
+}
+
+.two-boxes .box-four p {
+    color: var(--Dark-blue);
+}
+
+@media (max-width:1024px) {
+    .box-one img ,
+    .box-two img {
+        width: 50%;
+    }
+}
+
+@media (max-width:900px) {
+    .box-one ,
+    .box-two {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .box-one .info p ,
+    .box-two .info p {
+        max-width: fit-content;
+    }
+    .box-one img ,
+    .box-two img {
+        width: 100%;
+    }
+    .box-one .info .learn-more ,
+    .box-two .info .learn-more {
+        margin: auto;
+    }
+}
+
+@media (max-width: 700px) {
+    .two-boxes {
+        flex-direction: column;
+        text-align: center;
+    }
+    .two-boxes .box-three {
+        background-image: url(/images/mobile/image-graphic-design.jpg);
+    }
+    .two-boxes .box-four {
+        background-image: url(/images//mobile/image-photography.jpg);
+    }
+}
+
+@media (max-width:375px) {
+    section .box-one .info ,
+    section .box-two .info ,
+    section .box-three .info {
+        padding: 15px !important;
+    }
+} 
+/* End section */
+/* Start Client section */
+
+.client-test h5 {
+    color: var(--Very-dark-grayish-blue);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.client-test img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.client-test p {
+    max-width: 350px;
+}
+
+.client-test .client-one ,
+.client-test .client-two ,
+.client-test .client-three {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.client-test .client-one p ,
+.client-test .client-two p ,
+.client-test .client-three p {
+    color: var(--Dark-grayish-blue);
+}
+.client-test .client-one p:last-child ,
+.client-test .client-two p:last-child ,
+.client-test .client-three p:last-child {
+    color: var(--Grayish-blue);
+}
+
+/* End Client section */
+/* Start Footer */
+
+footer {
+    background-color: var(--Dark-moderate-cyan);
+}
+
+footer p {
+    color: var(--Very-dark-desaturated-blue);
+    cursor: pointer;
+    transition: .3s;
+}
+
+footer p:hover {
+    color: var(--White);
+}
+
+footer .icons i {
+    cursor: pointer;
+    transition: .3s;
+}
+
+footer .icons i:hover {
+    color: var(--White);
+}
+
+/* End Footer */
