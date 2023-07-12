@@ -30,7 +30,7 @@ p {
 }
 
 header {
-    background-image: url(/images/desktop/image-header.jpg);
+    background-image: url(../images/desktop/image-header.jpg);
     background-color: #333;
     height: 100vh;
     background-size: cover;
@@ -41,7 +41,7 @@ header {
 
 @media (max-width:768px) {
     header {
-        background-image: url(/images/mobile/image-header.jpg);
+        background-image: url(../images/mobile/image-header.jpg);
     }
     header .text h1 {
         font-size: 30px !important;
@@ -194,12 +194,12 @@ header .text h1 {
 }
 
 .two-boxes .box-three {
-    background-image: url(/images/desktop/image-graphic-design.jpg);
+    background-image: url(../images/desktop/image-graphic-design.jpg);
     background-color: #333;
 }
 
 .two-boxes .box-four {
-    background-image: url(/images/desktop/image-photography.jpg);
+    background-image: url(../images/desktop/image-photography.jpg);
     background-color: #333;
 }
 
@@ -254,10 +254,10 @@ header .text h1 {
         text-align: center;
     }
     .two-boxes .box-three {
-        background-image: url(/images/mobile/image-graphic-design.jpg);
+        background-image: url(../images/mobile/image-graphic-design.jpg);
     }
     .two-boxes .box-four {
-        background-image: url(/images//mobile/image-photography.jpg);
+        background-image: url(../images//mobile/image-photography.jpg);
     }
 }
 
